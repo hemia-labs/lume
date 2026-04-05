@@ -1,0 +1,17 @@
+{
+  "name": "icon",
+  "framework": "vue",
+  "type": "component",
+  "files": [
+    "icon.vue",
+    "icon.variants.ts",
+    "index.ts"
+  ],
+  "registryDependencies": [],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "peerDependencies": [
+    "@hemia/lume-vue"
+  ]
+}

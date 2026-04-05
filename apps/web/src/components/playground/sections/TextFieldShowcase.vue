@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, h, markRaw } from "vue"
 import { TextField } from "@/components/ui/textfield"
 import ShowcaseCard from "../ShowcaseCard.vue"
 
@@ -7,6 +7,59 @@ const email = ref("")
 const username = ref("")
 const password = ref("")
 const search = ref("")
+const showPassword = ref(false)
+
+// Icon components
+const SearchIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('circle', { cx: 11, cy: 11, r: 8 }),
+    h('path', { d: 'm21 21-4.3-4.3' })
+  ])
+})
+
+const EmailIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('rect', { width: 20, height: 16, x: 2, y: 4, rx: 2 }),
+    h('path', { d: 'm22 7-8.97 5.7A1 1 0 0 1 12 16v-4' })
+  ])
+})
+
+const PasswordIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('path', { d: 'M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z' }),
+    h('circle', { cx: 12, cy: 12, r: 3 })
+  ])
+})
+
+// Iconos para prepend/append externos
+const UserIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('path', { d: 'M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2' }),
+    h('circle', { cx: 12, cy: 7, r: 4 })
+  ])
+})
+
+const ExternalLinkIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('path', { d: 'M15 3h6v6' }),
+    h('path', { d: 'M10 14 21 3' }),
+    h('path', { d: 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' })
+  ])
+})
+
+const EyeIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('path', { d: 'M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z' }),
+    h('circle', { cx: 12, cy: 12, r: 3 })
+  ])
+})
+
+const CopyIcon = markRaw({
+  render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
+    h('rect', { width: 14, height: 14, x: 8, y: 8, rx: 2, ry: 2 }),
+    h('path', { d: 'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2' })
+  ])
+})
 </script>
 
 <template>
@@ -181,6 +234,110 @@ const search = ref("")
           </div>
           <div class="rounded-lg bg-muted/50 p-3">
             <pre class="text-xs font-mono text-muted-foreground">&lt;TextField disabled /&gt;</pre>
+          </div>
+        </div>
+      </ShowcaseCard>
+    </div>
+
+    <!-- With Icons -->
+    <div id="section-icons">
+      <ShowcaseCard title="With Icons" description="Text fields with prepend and append icons">
+        <div class="space-y-4">
+          <div class="max-w-sm">
+            <TextField
+              label="Search"
+              type="search"
+              placeholder="Search..."
+              :prepend-inner-icon="SearchIcon"
+            />
+          </div>
+          <div class="max-w-sm">
+            <TextField
+              label="Email"
+              type="email"
+              placeholder="you@example.com"
+              :prepend-inner-icon="EmailIcon"
+            />
+          </div>
+          <div class="max-w-sm">
+            <TextField
+              label="Password"
+              type="password"
+              placeholder="Enter password"
+              :append-inner-icon="PasswordIcon"
+            />
+          </div>
+          <div class="rounded-lg bg-muted/50 p-3">
+            <pre class="text-xs font-mono text-muted-foreground">:prepend-inner-icon="SearchIcon"
+:append-inner-icon="PasswordIcon"</pre>
+          </div>
+        </div>
+      </ShowcaseCard>
+    </div>
+
+    <!-- Prepend Icon -->
+    <div id="section-prepend-icon">
+      <ShowcaseCard title="Prepend Icon" description="Icon outside the input field (left)">
+        <div class="space-y-4">
+          <div class="max-w-sm">
+            <TextField
+              label="Username"
+              type="text"
+              placeholder="Enter username"
+              :prepend-icon="UserIcon"
+            />
+          </div>
+          <div class="rounded-lg bg-muted/50 p-3">
+            <pre class="text-xs font-mono text-muted-foreground">:prepend-icon="UserIcon"</pre>
+          </div>
+        </div>
+      </ShowcaseCard>
+    </div>
+
+    <!-- Append Icon -->
+    <div id="section-append-icon">
+      <ShowcaseCard title="Append Icon" description="Icon outside the input field (right)">
+        <div class="space-y-4">
+          <div class="max-w-sm">
+            <TextField
+              label="Website"
+              type="url"
+              placeholder="https://example.com"
+              :append-icon="ExternalLinkIcon"
+            />
+          </div>
+          <div class="rounded-lg bg-muted/50 p-3">
+            <pre class="text-xs font-mono text-muted-foreground">:append-icon="ExternalLinkIcon"</pre>
+          </div>
+        </div>
+      </ShowcaseCard>
+    </div>
+
+    <!-- Combined Icons -->
+    <div id="section-combined-icons">
+      <ShowcaseCard title="Combined Icons" description="Prepend + inner + append icons together">
+        <div class="space-y-4">
+          <div class="max-w-sm">
+            <TextField
+              label="Password"
+              type="password"
+              placeholder="Enter password"
+              :prepend-icon="UserIcon"
+              :append-inner-icon="EyeIcon"
+            />
+          </div>
+          <div class="max-w-sm">
+            <TextField
+              label="API Key"
+              type="text"
+              placeholder="Paste your API key"
+              :prepend-inner-icon="CopyIcon"
+              :append-icon="ExternalLinkIcon"
+            />
+          </div>
+          <div class="rounded-lg bg-muted/50 p-3">
+            <pre class="text-xs font-mono text-muted-foreground">:prepend-icon="UserIcon"
+:append-inner-icon="EyeIcon"</pre>
           </div>
         </div>
       </ShowcaseCard>

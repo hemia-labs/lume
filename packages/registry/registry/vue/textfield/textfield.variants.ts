@@ -21,4 +21,21 @@ export const textfieldVariants = cva(
   }
 )
 
+export const textfieldIconVariants = cva(
+  "text-muted-foreground flex shrink-0 items-center",
+  {
+    variants: {
+      size: {
+        default: "size-4",
+        sm: "size-3.5",
+        lg: "size-5",
+      },
+    },
+    defaultVariants: {
+      size: "default",
+    },
+  }
+)
+
 export type TextfieldVariants = VariantProps<typeof textfieldVariants>
+export type TextfieldIconVariants = VariantProps<typeof textfieldIconVariants>
