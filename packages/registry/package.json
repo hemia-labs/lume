@@ -2,6 +2,10 @@
   "name": "@hemia/lume-registry",
   "version": "0.0.1",
   "type": "module",
+  "files": ["registry"],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@hemia/lume-vue": "workspace:*",
     "class-variance-authority": "^0.7.1",
