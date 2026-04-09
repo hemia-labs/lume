@@ -9,9 +9,9 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">Badge</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         Small status indicators for labels, counts, and other UI elements.
       </p>
     </div>
@@ -40,8 +40,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             <Badge variant="ghost">Ghost</Badge>
             <Badge variant="link">Link</Badge>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;Badge variant="default | secondary | destructive | outline | ghost | link" /&gt;
             </p>
           </div>
@@ -77,7 +77,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             <div class="flex items-center justify-between">
               <div>
                 <h3 class="font-semibold">Project Alpha</h3>
-                <p class="text-sm text-muted-foreground">Active project</p>
+                <p class="text-sm text-lume-muted-foreground">Active project</p>
               </div>
               <Badge variant="default">Active</Badge>
             </div>
@@ -86,7 +86,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             <div class="flex items-center justify-between">
               <div>
                 <h3 class="font-semibold">Project Beta</h3>
-                <p class="text-sm text-muted-foreground">Pending review</p>
+                <p class="text-sm text-lume-muted-foreground">Pending review</p>
               </div>
               <Badge variant="secondary">Pending</Badge>
             </div>
@@ -101,7 +101,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
         <div class="flex flex-wrap items-center gap-3 py-4">
           <Badge class="rounded-full">Rounded Full</Badge>
           <Badge class="rounded-none">No Rounded</Badge>
-          <Badge class="border-primary text-primary">Custom Border</Badge>
+          <Badge class="border-lume-primary text-lume-primary">Custom Border</Badge>
           <Badge class="bg-blue-500 text-white border-transparent">Custom Colors</Badge>
         </div>
       </ShowcaseCard>
@@ -111,7 +111,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-props">
       <ShowcaseCard title="Props" description="Component props and types">
         <div class="space-y-4">
-          <div class="rounded-md bg-muted/50 p-4 text-sm">
+          <div class="rounded-md bg-lume-muted/50 p-4 text-sm">
             <table class="w-full">
               <thead>
                 <tr class="border-b text-left">
@@ -123,13 +123,13 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <tbody>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">variant</td>
-                  <td class="py-2 text-muted-foreground">'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'</td>
-                  <td class="py-2 text-muted-foreground">'default'</td>
+                  <td class="py-2 text-lume-muted-foreground">'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'</td>
+                  <td class="py-2 text-lume-muted-foreground">'default'</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">class</td>
-                  <td class="py-2 text-muted-foreground">string</td>
-                  <td class="py-2 text-muted-foreground">-</td>
+                  <td class="py-2 text-lume-muted-foreground">string</td>
+                  <td class="py-2 text-lume-muted-foreground">-</td>
                 </tr>
               </tbody>
             </table>

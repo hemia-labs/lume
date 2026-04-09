@@ -4,12 +4,12 @@ import { cn } from "@hemia/lume-vue"
 import { Field, FieldLabel, FieldDescription, FieldGroup } from "../field/index"
 
 const textfieldVariants = cva(
-  "flex h-9 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+  "flex h-9 w-full min-w-0 rounded-lg border border-lume-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-lume-foreground placeholder:text-lume-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-lume-input/50 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-lume-ring focus-visible:ring-offset-0 aria-invalid:border-lume-destructive aria-invalid:ring-3 aria-invalid:ring-lume-destructive/20 md:text-sm dark:bg-lume-input/30 dark:disabled:bg-lume-input/80 dark:aria-invalid:border-lume-destructive/50 dark:aria-invalid:ring-lume-destructive/40",
   {
     variants: {
       variant: {
         default: "",
-        error: "bg-background border-destructive aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+        error: "bg-lume-background border-lume-destructive aria-invalid:border-lume-destructive aria-invalid:ring-lume-destructive/20 dark:aria-invalid:border-lume-destructive/50 dark:aria-invalid:ring-lume-destructive/40",
       },
       size: {
         default: "",
@@ -25,7 +25,7 @@ const textfieldVariants = cva(
 )
 
 const textfieldIconVariants = cva(
-  "text-muted-foreground flex shrink-0 items-center",
+  "text-lume-muted-foreground flex shrink-0 items-center",
   {
     variants: {
       size: {
@@ -96,21 +96,21 @@ const getInputPaddingClass = () => {
       <component
         v-if="prependIcon"
         :is="prependIcon"
-        class="text-muted-foreground flex shrink-0 items-center"
+        class="text-lume-muted-foreground flex shrink-0 items-center"
         :class="iconSize === 'sm' ? 'size-3.5' : iconSize === 'lg' ? 'size-5' : 'size-4'"
       />
       <!-- Textfield inner container -->
       <div
         :class="cn(
           textfieldVariants({ variant: error ? 'error' : variant, size }),
-          'flex flex-1 items-center focus-within:rounded-lg focus-within:ring-2 focus-within:ring-ring/50 dark:focus-within:[--ring:217.2_32.6%_50%] focus-within:[--ring:210_5%_80%]'
+          'flex flex-1 items-center focus-within:rounded-lg focus-within:ring-2 focus-within:ring-lume-ring/50 dark:focus-within:[--ring:217.2_32.6%_50%] focus-within:[--ring:210_5%_80%]'
         )"
       >
         <!-- Prepend-inner icon (inside, at start) -->
         <component
           v-if="prependInnerIcon"
           :is="prependInnerIcon"
-          class="text-muted-foreground flex shrink-0 items-center"
+          class="text-lume-muted-foreground flex shrink-0 items-center"
           :class="[
             iconSize === 'sm' ? 'size-3.5' : iconSize === 'lg' ? 'size-5' : 'size-4',
             'me-1.5'
@@ -124,7 +124,7 @@ const getInputPaddingClass = () => {
           :disabled="disabled"
           :aria-invalid="!!error"
           :class="cn(
-            'flex-1 bg-transparent outline-none placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 w-full min-w-0',
+            'flex-1 bg-transparent outline-none placeholder:text-lume-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 w-full min-w-0',
             getInputPaddingClass()
           )"
           :style="{ '--tf-padding-x': '0.625rem' }"
@@ -134,7 +134,7 @@ const getInputPaddingClass = () => {
         <component
           v-if="appendInnerIcon"
           :is="appendInnerIcon"
-          class="text-muted-foreground flex shrink-0 items-center"
+          class="text-lume-muted-foreground flex shrink-0 items-center"
           :class="[
             iconSize === 'sm' ? 'size-3.5' : iconSize === 'lg' ? 'size-5' : 'size-4',
             'ms-1.5'
@@ -145,7 +145,7 @@ const getInputPaddingClass = () => {
       <component
         v-if="appendIcon"
         :is="appendIcon"
-        class="text-muted-foreground flex shrink-0 items-center"
+        class="text-lume-muted-foreground flex shrink-0 items-center"
         :class="iconSize === 'sm' ? 'size-3.5' : iconSize === 'lg' ? 'size-5' : 'size-4'"
       />
     </FieldGroup>

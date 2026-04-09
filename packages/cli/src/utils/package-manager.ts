@@ -33,12 +33,12 @@ export function getInstallCommand(packageManager: PackageManager): string {
  */
 export function installDependencies(
   dependencies: string[],
-  options: { dev?: boolean; cwd?: string } = {}
+  options: { dev?: boolean; cwd?: string; packageManager?: PackageManager } = {}
 ): void {
   if (dependencies.length === 0) return
 
-  const { dev = false, cwd = process.cwd() } = options
-  const packageManager = detectPackageManager(cwd)
+  const { dev = false, cwd = process.cwd(), packageManager: customPm } = options
+  const packageManager = customPm ?? detectPackageManager(cwd)
   const installCmd = getInstallCommand(packageManager)
   const devFlag = dev ? (packageManager === "npm" ? "--save-dev" : "-D") : ""
   

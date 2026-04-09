@@ -4,102 +4,103 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --lume-background: 0 0% 100%;
+    --lume-foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --lume-card: 0 0% 100%;
+    --lume-card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --lume-popover: 0 0% 100%;
+    --lume-popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --lume-primary: 222.2 47.4% 11.2%;
+    --lume-primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --lume-secondary: 210 40% 96.1%;
+    --lume-secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --lume-muted: 210 40% 96.1%;
+    --lume-muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --lume-accent: 210 40% 96.1%;
+    --lume-accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --lume-destructive: 0 84.2% 60.2%;
+    --lume-destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 5% 80% / 30%;
+    --lume-border: 214.3 31.8% 91.4%;
+    --lume-input: 214.3 31.8% 91.4%;
+    --lume-ring: 210 5% 80% / 30%;
 
-    --sidebar: 0 0% 100%;
-    --sidebar-foreground: 222.2 84% 4.9%;
-    --sidebar-primary: 222.2 47.4% 11.2%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 210 40% 96.1%;
-    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
-    --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: oklch(0.708 0 0);
+    --lume-sidebar: 0 0% 100%;
+    --lume-sidebar-foreground: 222.2 84% 4.9%;
+    --lume-sidebar-primary: 222.2 47.4% 11.2%;
+    --lume-sidebar-primary-foreground: 210 40% 98%;
+    --lume-sidebar-accent: 210 40% 96.1%;
+    --lume-sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --lume-sidebar-border: 214.3 31.8% 91.4%;
+    --lume-sidebar-ring: oklch(0.708 0 0);
 
-    --surface: 210 40% 97.5%;
-    --code-highlight: 210 40% 95.5%;
-    --code-number: 215.4 16.3% 46.9%;
-    --selection: 222.2 84% 4.9%;
-    --selection-foreground: 0 0% 100%;
+    --lume-surface: 210 40% 97.5%;
+    --lume-code-highlight: 210 40% 95.5%;
+    --lume-code-number: 215.4 16.3% 46.9%;
+    --lume-selection: 222.2 84% 4.9%;
+    --lume-selection-foreground: 0 0% 100%;
 
-    --radius-sm: 0.5rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-    --radius: 0.625rem;
+    --lume-radius-sm: 0.5rem;
+    --lume-radius-md: 0.75rem;
+    --lume-radius-lg: 1rem;
+    --lume-radius: 0.625rem;
 
-    --spacing: 0.25rem;
+    --lume-spacing: 0.25rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --lume-background: 222.2 84% 4.9%;
+    --lume-foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --lume-card: 222.2 84% 4.9%;
+    --lume-card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --lume-popover: 222.2 84% 4.9%;
+    --lume-popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --lume-primary: 210 40% 98%;
+    --lume-primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --lume-secondary: 217.2 32.6% 17.5%;
+    --lume-secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --lume-muted: 217.2 32.6% 17.5%;
+    --lume-muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --lume-accent: 217.2 32.6% 17.5%;
+    --lume-accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --lume-destructive: 0 62.8% 30.6%;
+    --lume-destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217.2 32.6% 50% / 30%;
+    --lume-border: 217.2 32.6% 17.5%;
+    --lume-input: 217.2 32.6% 17.5%;
+    --lume-ring: 217.2 32.6% 50% / 30%;
 
-    --sidebar: 222.2 84% 4.9%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
-    --sidebar-accent: 217.2 32.6% 17.5%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 212.7 26.8% 83.9%;
+    --lume-sidebar: 222.2 84% 4.9%;
+    --lume-sidebar-foreground: 210 40% 98%;
+    --lume-sidebar-primary: 210 40% 98%;
+    --lume-sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --lume-sidebar-accent: 217.2 32.6% 17.5%;
+    --lume-sidebar-accent-foreground: 210 40% 98%;
+    --lume-sidebar-border: 217.2 32.6% 17.5%;
+    --lume-sidebar-ring: 212.7 26.8% 83.9%;
   }
 
   * {
-    @apply border-border;
+    border-color: hsl(var(--lume-border));
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--lume-background));
+    color: hsl(var(--lume-foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -108,7 +109,7 @@
 
 @supports (color: color-mix(in lab, red, red)) {
   * {
-    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
+    outline-color: color-mix(in oklab, var(--lume-ring) 50%, transparent);
   }
 }
 
@@ -123,10 +124,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
+  background: hsl(var(--lume-border));
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.3);
+  background: hsl(var(--lume-muted-foreground) / 0.3);
 }

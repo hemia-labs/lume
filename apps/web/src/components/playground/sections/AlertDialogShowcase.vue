@@ -21,9 +21,9 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">Alert Dialog</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         A modal dialog that requires the user to confirm an action before proceeding. Perfect for destructive actions.
       </p>
     </div>
@@ -129,8 +129,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               </AlertDialogContent>
             </AlertDialog>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;AlertDialogContent size="sm | md | lg | xl | full" /&gt;
             </p>
           </div>
@@ -161,8 +161,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               </AlertDialogContent>
             </AlertDialog>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;AlertDialogContent persistent /&gt;
             </p>
           </div>
@@ -182,7 +182,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <AlertDialogContent>
                 <AlertDialogHeader>
                   <template #media>
-                    <AlertDialogMedia class="bg-destructive/10 text-destructive dark:bg-destructive/20 dark:text-destructive">
+                    <AlertDialogMedia class="bg-lume-destructive/10 text-lume-destructive dark:bg-lume-destructive/20 dark:text-lume-destructive">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
                     </AlertDialogMedia>
                   </template>
@@ -198,8 +198,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               </AlertDialogContent>
             </AlertDialog>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               Use &lt;template #media&gt; slot in AlertDialogHeader to center media
             </p>
           </div>
@@ -211,7 +211,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-components">
       <ShowcaseCard title="Sub-components" description="Available components and their purposes">
         <div class="space-y-4">
-          <div class="rounded-md bg-muted/50 p-4 text-sm">
+          <div class="rounded-md bg-lume-muted/50 p-4 text-sm">
             <table class="w-full">
               <thead>
                 <tr class="border-b text-left">
@@ -222,43 +222,43 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <tbody>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialog</td>
-                  <td class="py-2 text-muted-foreground">Main container that manages state</td>
+                  <td class="py-2 text-lume-muted-foreground">Main container that manages state</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogTrigger</td>
-                  <td class="py-2 text-muted-foreground">Button that opens the dialog</td>
+                  <td class="py-2 text-lume-muted-foreground">Button that opens the dialog</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogContent</td>
-                  <td class="py-2 text-muted-foreground">Modal content with overlay and animations</td>
+                  <td class="py-2 text-lume-muted-foreground">Modal content with overlay and animations</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogHeader</td>
-                  <td class="py-2 text-muted-foreground">Container for title and description</td>
+                  <td class="py-2 text-lume-muted-foreground">Container for title and description</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogFooter</td>
-                  <td class="py-2 text-muted-foreground">Container for action buttons</td>
+                  <td class="py-2 text-lume-muted-foreground">Container for action buttons</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogTitle</td>
-                  <td class="py-2 text-muted-foreground">Bold title text</td>
+                  <td class="py-2 text-lume-muted-foreground">Bold title text</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogDescription</td>
-                  <td class="py-2 text-muted-foreground">Muted description text</td>
+                  <td class="py-2 text-lume-muted-foreground">Muted description text</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogAction</td>
-                  <td class="py-2 text-muted-foreground">Confirm button (primary style, optional destructive)</td>
+                  <td class="py-2 text-lume-muted-foreground">Confirm button (primary style, optional destructive)</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogCancel</td>
-                  <td class="py-2 text-muted-foreground">Cancel button (default style)</td>
+                  <td class="py-2 text-lume-muted-foreground">Cancel button (default style)</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">AlertDialogMedia</td>
-                  <td class="py-2 text-muted-foreground">Container for icons/media</td>
+                  <td class="py-2 text-lume-muted-foreground">Container for icons/media</td>
                 </tr>
               </tbody>
             </table>
@@ -271,7 +271,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-props">
       <ShowcaseCard title="Props" description="Component props and types">
         <div class="space-y-4">
-          <div class="rounded-md bg-muted/50 p-4 text-sm">
+          <div class="rounded-md bg-lume-muted/50 p-4 text-sm">
             <table class="w-full">
               <thead>
                 <tr class="border-b text-left">
@@ -282,43 +282,43 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <tbody>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialog</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogTrigger</td>
-                  <td class="py-2 text-muted-foreground">asChild?: boolean, class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">asChild?: boolean, class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogContent</td>
-                  <td class="py-2 text-muted-foreground">size?: 'sm' | 'md' | 'lg' | 'xl' | 'full', persistent?: boolean, class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">size?: 'sm' | 'md' | 'lg' | 'xl' | 'full', persistent?: boolean, class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogHeader</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogFooter</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogTitle</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogDescription</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">AlertDialogAction</td>
-                  <td class="py-2 text-muted-foreground">variant?: 'default' | 'destructive', class?: string, @click event</td>
+                  <td class="py-2 text-lume-muted-foreground">variant?: 'default' | 'destructive', class?: string, @click event</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">AlertDialogCancel</td>
-                  <td class="py-2 text-muted-foreground">class?: string, @click event</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string, @click event</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">AlertDialogMedia</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
               </tbody>
             </table>

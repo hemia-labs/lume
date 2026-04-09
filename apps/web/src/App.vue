@@ -59,7 +59,7 @@ function handleNavigate(id: string) {
 </script>
 
 <template>
-  <div class="min-h-screen bg-background text-foreground">
+  <div class="min-h-screen bg-lume-background text-lume-foreground">
     <div class="flex min-h-screen">
       <!-- Sidebar -->
       <PlaygroundSidebar
@@ -87,7 +87,7 @@ function handleNavigate(id: string) {
 
         <!-- Footer -->
         <footer class="border-t px-4 py-3">
-          <p class="text-xs text-muted-foreground text-center">
+          <p class="text-xs text-lume-muted-foreground text-center">
             @hemia/lume &mdash; Component system for Vue, React, Svelte & Astro
           </p>
         </footer>

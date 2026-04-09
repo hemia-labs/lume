@@ -4,15 +4,15 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@hemia/lume-vue"
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-lume-foreground",
   {
     variants: {
       variant: {
-        default: "bg-muted/50 text-foreground border-border",
+        default: "bg-lume-muted/50 text-lume-foreground border-lume-border",
         destructive:
-          "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive bg-destructive/10 dark:bg-destructive/20",
+          "border-lume-destructive/50 text-lume-destructive dark:border-lume-destructive [&>svg]:text-lume-destructive bg-lume-destructive/10 dark:bg-lume-destructive/20",
         tonal:
-          "border-transparent bg-destructive/10 text-destructive dark:bg-destructive/30 dark:text-destructive-200",
+          "border-transparent bg-lume-destructive/10 text-lume-destructive dark:bg-lume-destructive/30 dark:text-lume-destructive-200",
         success:
           "border-transparent bg-emerald-500/10 text-emerald-700 dark:text-emerald-200 dark:bg-emerald-500/30",
         warning:

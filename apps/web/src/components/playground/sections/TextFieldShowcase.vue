@@ -68,9 +68,9 @@ const CopyIcon = markRaw({
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">TextField</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         Input component with built-in label, description, and error states.
       </p>
     </div>
@@ -97,8 +97,8 @@ const CopyIcon = markRaw({
               v-model="username"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">&lt;TextField label="Username" placeholder="..." /&gt;</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">&lt;TextField label="Username" placeholder="..." /&gt;</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -117,8 +117,8 @@ const CopyIcon = markRaw({
               v-model="email"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">description="Help text here"</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">description="Help text here"</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -137,8 +137,8 @@ const CopyIcon = markRaw({
               v-model="password"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">error="Error message"</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">error="Error message"</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -171,8 +171,8 @@ const CopyIcon = markRaw({
               />
             </div>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">&lt;TextField size="sm | default | lg" /&gt;</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">&lt;TextField size="sm | default | lg" /&gt;</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -214,8 +214,8 @@ const CopyIcon = markRaw({
               placeholder="+1 (555) 000-0000"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">&lt;TextField type="text | email | password | ..." /&gt;</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">&lt;TextField type="text | email | password | ..." /&gt;</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -232,8 +232,8 @@ const CopyIcon = markRaw({
               disabled
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">&lt;TextField disabled /&gt;</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">&lt;TextField disabled /&gt;</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -267,8 +267,8 @@ const CopyIcon = markRaw({
               :append-inner-icon="PasswordIcon"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">:prepend-inner-icon="SearchIcon"
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">:prepend-inner-icon="SearchIcon"
 :append-inner-icon="PasswordIcon"</pre>
           </div>
         </div>
@@ -287,8 +287,8 @@ const CopyIcon = markRaw({
               :prepend-icon="UserIcon"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">:prepend-icon="UserIcon"</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">:prepend-icon="UserIcon"</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -306,8 +306,8 @@ const CopyIcon = markRaw({
               :append-icon="ExternalLinkIcon"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">:append-icon="ExternalLinkIcon"</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">:append-icon="ExternalLinkIcon"</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -335,8 +335,8 @@ const CopyIcon = markRaw({
               :append-icon="ExternalLinkIcon"
             />
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">:prepend-icon="UserIcon"
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">:prepend-icon="UserIcon"
 :append-inner-icon="EyeIcon"</pre>
           </div>
         </div>
@@ -356,10 +356,10 @@ const CopyIcon = markRaw({
             />
           </div>
           <div class="rounded-lg border p-3">
-            <p class="text-xs font-medium">Current value: <span class="font-mono text-primary">"{{ search }}"</span></p>
+            <p class="text-xs font-medium">Current value: <span class="font-mono text-lume-primary">"{{ search }}"</span></p>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <pre class="text-xs font-mono text-muted-foreground">v-model="search"</pre>
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <pre class="text-xs font-mono text-lume-muted-foreground">v-model="search"</pre>
           </div>
         </div>
       </ShowcaseCard>
@@ -383,7 +383,7 @@ const CopyIcon = markRaw({
             />
             <button
               type="submit"
-              class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9"
+              class="inline-flex items-center justify-center rounded-lg bg-lume-primary px-4 py-2 text-sm font-medium text-lume-primary-foreground shadow transition-colors hover:bg-lume-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lume-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9"
             >
               Sign In
             </button>

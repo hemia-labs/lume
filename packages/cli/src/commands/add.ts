@@ -3,7 +3,7 @@ import fs from "fs-extra"
 import pc from "picocolors"
 import prompts from "prompts"
 import { createRequire } from "module"
-import { installDependencies } from "../utils/package-manager.js"
+import { installDependencies, getInstallCommand, type PackageManager } from "../utils/package-manager.js"
 import { getAllDependencies } from "../utils/registry.js"
 
 const require = createRequire(import.meta.url)
@@ -34,6 +34,15 @@ function getFrameworkFromConfig(cwd: string): string {
     return config.framework ?? "vue"
   } catch {
     return "vue"
+  }
+}
+
+function getPackageManagerFromConfig(cwd: string): PackageManager {
+  try {
+    const config = fs.readJsonSync(path.resolve(cwd, "lume.config.json"))
+    return config.packageManager ?? "npm"
+  } catch {
+    return "npm"
   }
 }
 
@@ -86,6 +95,7 @@ export async function add(components: string | string[] = [], options: AddOption
   }
 
   const framework = options.framework ?? getFrameworkFromConfig(cwd)
+  const packageManager = getPackageManagerFromConfig(cwd)
   const frameworkRegistry = resolveRegistryPath(framework)
 
   if (!options.silent) {
@@ -122,8 +132,15 @@ export async function add(components: string | string[] = [], options: AddOption
   // Copy all components
   let copiedCount = 0
   for (const componentName of componentsArray) {
-    const source = path.join(frameworkRegistry, componentName)
+    const sourceDir = path.join(frameworkRegistry, componentName)
+    const sourceFile = path.join(sourceDir, `${componentName}.vue`)
     const target = path.join(targetBase, `${componentName}.vue`)
+
+    // Check if source file exists
+    if (!(await fs.pathExists(sourceFile))) {
+      log(pc.red(`❌ Source file not found: ${sourceFile}`), options)
+      continue
+    }
 
     const targetExists = await fs.pathExists(target)
 
@@ -143,7 +160,7 @@ export async function add(components: string | string[] = [], options: AddOption
     }
 
     if (options.overwrite || options.yes || !targetExists) {
-      await fs.copy(source, target, { overwrite: true })
+      await fs.copy(sourceFile, target, { overwrite: true })
       copiedCount++
       log(pc.green(`   ✓ ${componentName}`), options)
     }
@@ -155,12 +172,12 @@ export async function add(components: string | string[] = [], options: AddOption
 
   if (deps.length > 0) {
     log("", options)
-    installDependencies(deps)
+    installDependencies(deps, { packageManager })
   }
 
   if (devDeps.length > 0) {
     log("", options)
-    installDependencies(devDeps, { dev: true })
+    installDependencies(devDeps, { dev: true, packageManager })
   }
 
   log(pc.green(`\n✅ Added ${copiedCount} component(s) to ${targetBase}/`), options)

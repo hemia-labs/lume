@@ -9,9 +9,9 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">Alert</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         Displays a callout for user attention. Supports multiple variants and can include title, description, and actions.
       </p>
     </div>
@@ -75,8 +75,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               </AlertDescription>
             </Alert>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;Alert variant="default | destructive | tonal | success | warning | info" /&gt;
             </p>
           </div>
@@ -141,7 +141,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               A new version is ready to install.
             </AlertDescription>
             <AlertAction class="mt-3">
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lume-ring disabled:pointer-events-none disabled:opacity-50 bg-lume-primary text-lume-primary-foreground hover:bg-lume-primary/90 h-8 px-3">
                 Update Now
               </button>
             </AlertAction>
@@ -153,10 +153,10 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               This action is permanent and cannot be undone.
             </AlertDescription>
             <AlertAction class="mt-3 gap-2">
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 px-3">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lume-ring disabled:pointer-events-none disabled:opacity-50 border border-lume-input bg-lume-background hover:bg-lume-accent hover:text-lume-accent-foreground h-8 px-3">
                 Cancel
               </button>
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-destructive text-destructive-foreground hover:bg-destructive/90 h-8 px-3">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lume-ring disabled:pointer-events-none disabled:opacity-50 bg-lume-destructive text-lume-destructive-foreground hover:bg-lume-destructive/90 h-8 px-3">
                 Delete
               </button>
             </AlertAction>
@@ -171,7 +171,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
         <div class="space-y-6">
           <!-- Success -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Success</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Success</p>
             <Alert class="max-w-md">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               <AlertTitle>Changes saved</AlertTitle>
@@ -179,7 +179,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
                 Your preferences have been updated successfully.
               </AlertDescription>
               <AlertAction class="mt-3">
-                <button class="text-sm font-medium text-primary hover:underline">
+                <button class="text-sm font-medium text-lume-primary hover:underline">
                   View details
                 </button>
               </AlertAction>
@@ -188,15 +188,15 @@ import ShowcaseCard from "../ShowcaseCard.vue"
 
           <!-- With Link -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">With Link</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">With Link</p>
             <Alert class="max-w-md">
               <AlertTitle>New message</AlertTitle>
               <AlertDescription>
                 You have a new message from
-                <a href="#" class="font-medium text-primary hover:underline">john@example.com</a>
+                <a href="#" class="font-medium text-lume-primary hover:underline">john@example.com</a>
               </AlertDescription>
               <AlertAction class="mt-3">
-                <button class="text-sm font-medium text-primary hover:underline">
+                <button class="text-sm font-medium text-lume-primary hover:underline">
                   View message
                 </button>
               </AlertAction>

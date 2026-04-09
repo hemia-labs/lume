@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander"
 import { add } from "./commands/add.js"
+import { addStyles } from "./commands/add-styles.js"
 import { init } from "./commands/init.js"
 import { list } from "./commands/list.js"
 
@@ -49,6 +50,18 @@ program
   .option("-h, --help", "display help for command")
   .option("-f, --framework <framework>", "Target framework (vue, react, svelte, astro)")
   .action(add)
+
+program
+  .command("add-styles")
+  .description("add globals.css and tailwind.config.ts with merge support")
+  .option("-y, --yes", "skip confirmation prompt. (default: false)")
+  .option("-o, --overwrite", "overwrite existing files. (default: false)")
+  .option("-f, --force", "force overwrite without asking. (default: false)")
+  .option("-c, --cwd <cwd>", "the working directory. defaults to the current directory.")
+  .option("-s, --silent", "mute output. (default: false)")
+  .option("-v, --vuetify", "use Vuetify template. (default: false)")
+  .option("-h, --help", "display help for command")
+  .action(addStyles)
 
 program
   .command("list")

@@ -13,44 +13,69 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        lg: "var(--radius-lg)",
-        md: "var(--radius-md)",
-        sm: "var(--radius-sm)",
+        lg: "var(--lume-radius-lg)",
+        md: "var(--lume-radius-md)",
+        sm: "var(--lume-radius-sm)",
       },
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        lume: {
+          background: "hsl(var(--lume-background))",
+          foreground: "hsl(var(--lume-foreground))",
+          card: {
+            DEFAULT: "hsl(var(--lume-card))",
+            foreground: "hsl(var(--lume-card-foreground))",
+          },
+          popover: {
+            DEFAULT: "hsl(var(--lume-popover))",
+            foreground: "hsl(var(--lume-popover-foreground))",
+          },
+          primary: {
+            DEFAULT: "hsl(var(--lume-primary))",
+            foreground: "hsl(var(--lume-primary-foreground))",
+          },
+          secondary: {
+            DEFAULT: "hsl(var(--lume-secondary))",
+            foreground: "hsl(var(--lume-secondary-foreground))",
+          },
+          muted: {
+            DEFAULT: "hsl(var(--lume-muted))",
+            foreground: "hsl(var(--lume-muted-foreground))",
+          },
+          accent: {
+            DEFAULT: "hsl(var(--lume-accent))",
+            foreground: "hsl(var(--lume-accent-foreground))",
+          },
+          destructive: {
+            DEFAULT: "hsl(var(--lume-destructive))",
+            foreground: "hsl(var(--lume-destructive-foreground))",
+          },
+          border: "hsl(var(--lume-border))",
+          input: "hsl(var(--lume-input))",
+          ring: "hsl(var(--lume-ring))",
+          sidebar: {
+            DEFAULT: "hsl(var(--lume-sidebar))",
+            foreground: "hsl(var(--lume-sidebar-foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--lume-sidebar-primary))",
+              foreground: "hsl(var(--lume-sidebar-primary-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--lume-sidebar-accent))",
+              foreground: "hsl(var(--lume-sidebar-accent-foreground))",
+            },
+            border: "hsl(var(--lume-sidebar-border))",
+            ring: "hsl(var(--lume-sidebar-ring))",
+          },
+          surface: "hsl(var(--lume-surface))",
+          code: {
+            highlight: "hsl(var(--lume-code-highlight))",
+            number: "hsl(var(--lume-code-number))",
+          },
+          selection: {
+            DEFAULT: "hsl(var(--lume-selection))",
+            foreground: "hsl(var(--lume-selection-foreground))",
+          },
+        }
       }
     }
   },

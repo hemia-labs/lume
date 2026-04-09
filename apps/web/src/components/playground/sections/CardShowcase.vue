@@ -18,9 +18,9 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">Card</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         A flexible container for grouping related content with headers, descriptions, and actions.
       </p>
     </div>
@@ -34,7 +34,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             <CardDescription>Manage your AI-powered automation workflows</CardDescription>
           </CardHeader>
           <CardContent>
-            <p class="text-sm text-muted-foreground">
+            <p class="text-sm text-lume-muted-foreground">
               Create and manage complex automation workflows with our intuitive builder.
             </p>
           </CardContent>
@@ -50,14 +50,14 @@ import ShowcaseCard from "../ShowcaseCard.vue"
       <ShowcaseCard title="Sizes" description="Different card sizes">
         <div class="flex flex-wrap gap-4 py-4">
           <div>
-            <p class="mb-2 text-sm text-muted-foreground">Small</p>
+            <p class="mb-2 text-sm text-lume-muted-foreground">Small</p>
             <Card size="sm" class="w-[280px]">
               <CardHeader>
                 <CardTitle>Quick Action</CardTitle>
                 <CardDescription>Short description here</CardDescription>
               </CardHeader>
               <CardContent>
-                <p class="text-sm text-muted-foreground">Content goes here</p>
+                <p class="text-sm text-lume-muted-foreground">Content goes here</p>
               </CardContent>
               <CardFooter>
                 <Button size="sm" class="w-full">Action</Button>
@@ -65,14 +65,14 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             </Card>
           </div>
           <div>
-            <p class="mb-2 text-sm text-muted-foreground">Default</p>
+            <p class="mb-2 text-sm text-lume-muted-foreground">Default</p>
             <Card class="w-[350px]">
               <CardHeader>
                 <CardTitle>Full Card</CardTitle>
                 <CardDescription>With all the details</CardDescription>
               </CardHeader>
               <CardContent>
-                <p class="text-sm text-muted-foreground">More detailed content here</p>
+                <p class="text-sm text-lume-muted-foreground">More detailed content here</p>
               </CardContent>
               <CardFooter>
                 <Button>Confirm</Button>
@@ -80,8 +80,8 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             </Card>
           </div>
         </div>
-        <div class="rounded-lg bg-muted/50 p-3">
-          <p class="text-xs font-mono text-muted-foreground">
+        <div class="rounded-lg bg-lume-muted/50 p-3">
+          <p class="text-xs font-mono text-lume-muted-foreground">
             &lt;Card size="default | sm" /&gt;
           </p>
         </div>
@@ -101,7 +101,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <CardDescription>Configure your preferences</CardDescription>
             </CardHeader>
             <CardContent>
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm text-lume-muted-foreground">
                 Adjust your account settings and preferences.
               </p>
             </CardContent>
@@ -118,14 +118,14 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <CardDescription>Stay updated</CardDescription>
             </CardHeader>
             <CardContent>
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm text-lume-muted-foreground">
                 Receive alerts about important events.
               </p>
             </CardContent>
           </Card>
         </div>
-        <div class="rounded-lg bg-muted/50 p-3">
-          <p class="text-xs font-mono text-muted-foreground">
+        <div class="rounded-lg bg-lume-muted/50 p-3">
+          <p class="text-xs font-mono text-lume-muted-foreground">
             &lt;Card&gt;&lt;CardAction&gt;...&lt;/CardAction&gt;...&lt;/Card&gt;
           </p>
         </div>
@@ -141,7 +141,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <CardTitle>Basic Card</CardTitle>
             </CardHeader>
             <CardContent>
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm text-lume-muted-foreground">
                 This is a simple card with just a title and content.
               </p>
             </CardContent>
@@ -167,7 +167,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
                     id="name"
                     type="text"
                     placeholder="John Doe"
-                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    class="flex h-10 w-full rounded-md border border-lume-input bg-lume-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-lume-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lume-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   />
                 </div>
                 <div class="grid gap-2">
@@ -176,7 +176,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
                     id="email"
                     type="email"
                     placeholder="john@example.com"
-                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    class="flex h-10 w-full rounded-md border border-lume-input bg-lume-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-lume-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lume-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   />
                 </div>
                 <div class="grid gap-2">
@@ -185,7 +185,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
                     id="message"
                     placeholder="Your message..."
                     rows="3"
-                    class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    class="flex min-h-[80px] w-full rounded-md border border-lume-input bg-lume-background px-3 py-2 text-sm ring-offset-background placeholder:text-lume-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lume-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   ></textarea>
                 </div>
               </form>
@@ -209,7 +209,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <CardDescription>Are you sure you want to proceed?</CardDescription>
             </CardHeader>
             <CardContent>
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm text-lume-muted-foreground">
                 This action cannot be undone once confirmed.
               </p>
             </CardContent>
@@ -265,10 +265,10 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-class">
       <ShowcaseCard title="Custom Class" description="Add custom classes for additional styling">
         <div class="flex flex-wrap gap-4 py-4">
-          <Card class="w-[280px] border-primary">
+          <Card class="w-[280px] border-lume-primary">
             <CardHeader>
               <CardTitle>Custom Border</CardTitle>
-              <CardDescription>Using border-primary</CardDescription>
+              <CardDescription>Using border-lume-primary</CardDescription>
             </CardHeader>
           </Card>
 
@@ -279,10 +279,10 @@ import ShowcaseCard from "../ShowcaseCard.vue"
             </CardHeader>
           </Card>
 
-          <Card class="w-[280px] bg-primary/5">
+          <Card class="w-[280px] bg-lume-primary/5">
             <CardHeader>
               <CardTitle>Custom Background</CardTitle>
-              <CardDescription>Using bg-primary/5</CardDescription>
+              <CardDescription>Using bg-lume-primary/5</CardDescription>
             </CardHeader>
           </Card>
         </div>
@@ -293,7 +293,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-components">
       <ShowcaseCard title="Sub-components" description="Available components and their purposes">
         <div class="space-y-4">
-          <div class="rounded-md bg-muted/50 p-4 text-sm">
+          <div class="rounded-md bg-lume-muted/50 p-4 text-sm">
             <table class="w-full">
               <thead>
                 <tr class="border-b text-left">
@@ -304,31 +304,31 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <tbody>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">Card</td>
-                  <td class="py-2 text-muted-foreground">Root container with size prop</td>
+                  <td class="py-2 text-lume-muted-foreground">Root container with size prop</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardHeader</td>
-                  <td class="py-2 text-muted-foreground">Container for title and description</td>
+                  <td class="py-2 text-lume-muted-foreground">Container for title and description</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardTitle</td>
-                  <td class="py-2 text-muted-foreground">Bold title text</td>
+                  <td class="py-2 text-lume-muted-foreground">Bold title text</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardDescription</td>
-                  <td class="py-2 text-muted-foreground">Muted description text</td>
+                  <td class="py-2 text-lume-muted-foreground">Muted description text</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardContent</td>
-                  <td class="py-2 text-muted-foreground">Main content area</td>
+                  <td class="py-2 text-lume-muted-foreground">Main content area</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardFooter</td>
-                  <td class="py-2 text-muted-foreground">Container for action buttons</td>
+                  <td class="py-2 text-lume-muted-foreground">Container for action buttons</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">CardAction</td>
-                  <td class="py-2 text-muted-foreground">Action buttons positioned in top-right</td>
+                  <td class="py-2 text-lume-muted-foreground">Action buttons positioned in top-right</td>
                 </tr>
               </tbody>
             </table>
@@ -341,7 +341,7 @@ import ShowcaseCard from "../ShowcaseCard.vue"
     <div id="section-props">
       <ShowcaseCard title="Props" description="Component props and types">
         <div class="space-y-4">
-          <div class="rounded-md bg-muted/50 p-4 text-sm">
+          <div class="rounded-md bg-lume-muted/50 p-4 text-sm">
             <table class="w-full">
               <thead>
                 <tr class="border-b text-left">
@@ -352,31 +352,31 @@ import ShowcaseCard from "../ShowcaseCard.vue"
               <tbody>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">Card</td>
-                  <td class="py-2 text-muted-foreground">size?: 'default' | 'sm', class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">size?: 'default' | 'sm', class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardHeader</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardTitle</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardDescription</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardContent</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr class="border-b">
                   <td class="py-2 font-mono text-xs">CardFooter</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
                 <tr>
                   <td class="py-2 font-mono text-xs">CardAction</td>
-                  <td class="py-2 text-muted-foreground">class?: string</td>
+                  <td class="py-2 text-lume-muted-foreground">class?: string</td>
                 </tr>
               </tbody>
             </table>

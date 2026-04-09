@@ -3,19 +3,19 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@hemia/lume-vue"
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-lume-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+          "border-transparent bg-lume-primary text-lume-primary-foreground shadow hover:bg-lume-primary/80",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "border-transparent bg-lume-secondary text-lume-secondary-foreground hover:bg-lume-secondary/80",
         destructive:
-          "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
-        outline: "text-foreground",
-        ghost: "border-transparent hover:bg-accent hover:text-accent-foreground",
-        link: "border-transparent text-primary underline-offset-4 hover:underline",
+          "border-transparent bg-lume-destructive text-lume-destructive-foreground shadow hover:bg-lume-destructive/80",
+        outline: "text-lume-foreground",
+        ghost: "border-transparent hover:bg-lume-accent hover:text-lume-accent-foreground",
+        link: "border-transparent text-lume-primary underline-offset-4 hover:underline",
       },
     },
     defaultVariants: {

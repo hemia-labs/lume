@@ -2,11 +2,13 @@ import fs from "fs-extra"
 import path from "path"
 import pc from "picocolors"
 import prompts from "prompts"
-import { GLOBALS_CSS_TEMPLATE, TAILWIND_CONFIG_TEMPLATE, getTemplateConfig } from "../utils/templates.js"
-import { installDependencies } from "../utils/package-manager.js"
+import { GLOBALS_CSS_TEMPLATE, getTemplateConfig } from "../utils/templates.js"
+import { installDependencies, detectPackageManager, getInstallCommand, type PackageManager } from "../utils/package-manager.js"
 
 const SUPPORTED_FRAMEWORKS = ["vue", "react", "svelte", "astro"] as const
 type Framework = typeof SUPPORTED_FRAMEWORKS[number]
+
+const SUPPORTED_PACKAGE_MANAGERS: PackageManager[] = ["npm", "bun", "pnpm", "yarn"]
 
 interface InitOptions {
   template?: string
@@ -136,7 +138,33 @@ export async function init(options: InitOptions = {}) {
     process.exit(1)
   }
 
-  // Get template configuration
+  // Detect or ask for package manager
+  const detectedPm = detectPackageManager(cwd)
+  let packageManager: PackageManager
+
+  if (detectedPm) {
+    packageManager = detectedPm
+    info(`Detected package manager: ${detectedPm}`, options)
+  } else if (!options.yes) {
+    const { pm } = await prompts({
+      type: "select",
+      name: "pm",
+      message: "Which package manager are you using?",
+      choices: SUPPORTED_PACKAGE_MANAGERS.map((pm) => ({ title: pm, value: pm }))
+    })
+    packageManager = pm
+  } else {
+    // Default to npm if --yes and no package manager detected
+    packageManager = "npm"
+  }
+
+  if (!packageManager) {
+    log(pc.red("❌ Package manager selection required"), options)
+    process.exit(1)
+  }
+
+  // Get install command for the selected package manager
+  const installCmd = getInstallCommand(packageManager)
   const templateConfig = getTemplateConfig(framework, template)
 
   // Determine CSS variables setting
@@ -145,10 +173,10 @@ export async function init(options: InitOptions = {}) {
   // Create config file
   const config = {
     framework,
+    packageManager,
     style: useCssVariables ? "css-variables" : "default",
     template: templateConfig.template,
     tailwind: {
-      config: templateConfig.tailwindConfigPath,
       css: templateConfig.globalsCssPath,
       prefix: ""
     },
@@ -161,13 +189,13 @@ export async function init(options: InitOptions = {}) {
   await fs.writeJson(configPath, config, { spaces: 2 })
   log(pc.green(`✅ Created lume.config.json`), options)
 
-  // Ask to write CSS and Tailwind config (skip if --yes)
+  // Ask to write globals.css (skip if --yes)
   let writeFiles = options.yes
   if (!options.yes) {
     const { confirm } = await prompts({
       type: "confirm",
       name: "confirm",
-      message: "Write globals.css and tailwind.config.ts?",
+      message: "Write globals.css?",
       initial: true
     })
     writeFiles = confirm
@@ -195,27 +223,6 @@ export async function init(options: InitOptions = {}) {
       await fs.writeFile(cssPath, GLOBALS_CSS_TEMPLATE)
       log(pc.green(`✅ Created ${templateConfig.globalsCssPath}`), options)
     }
-
-    // Write tailwind.config.ts
-    const tailwindPath = path.resolve(cwd, templateConfig.tailwindConfigPath)
-
-    if (await fs.pathExists(tailwindPath)) {
-      if (options.force || !options.yes) {
-        const { overwrite } = await prompts({
-          type: "confirm",
-          name: "overwrite",
-          message: `${templateConfig.tailwindConfigPath} already exists. Overwrite?`,
-          initial: false
-        })
-        if (overwrite) {
-          await fs.writeFile(tailwindPath, TAILWIND_CONFIG_TEMPLATE)
-          log(pc.green(`✅ Updated ${templateConfig.tailwindConfigPath}`), options)
-        }
-      }
-    } else {
-      await fs.writeFile(tailwindPath, TAILWIND_CONFIG_TEMPLATE)
-      log(pc.green(`✅ Created ${templateConfig.tailwindConfigPath}`), options)
-    }
   }
 
   // Ask to install dependencies (skip if --yes)
@@ -224,7 +231,7 @@ export async function init(options: InitOptions = {}) {
     const { confirm } = await prompts({
       type: "confirm",
       name: "confirm",
-      message: "Install base dependencies (tailwindcss, autoprefixer, postcss)?",
+      message: "Install base dependencies (tailwindcss)?",
       initial: true
     })
     installDeps = confirm
@@ -232,14 +239,14 @@ export async function init(options: InitOptions = {}) {
 
   if (installDeps) {
     log("", options)
-    const baseDeps = ["tailwindcss", "autoprefixer", "postcss"]
+    const baseDeps = ["tailwindcss"]
     installDependencies(baseDeps, { dev: true })
 
     // Install framework peer dependency
     log("", options)
     const frameworkPkg = framework === "vue" ? "@hemia/lume-vue" : `@hemia/lume-${framework}`
     info(`📦 Installing ${frameworkPkg}...`, options)
-    log(pc.dim(`   When published, run: npm install ${frameworkPkg}`), options)
+    log(pc.dim(`   When published, run: ${installCmd} ${frameworkPkg}`), options)
   }
 
   log("", options)

@@ -22,9 +22,9 @@ const handleSubmit = () => {
     <div>
       <div class="flex items-center gap-3">
         <h1 class="text-2xl font-bold tracking-tight">Button</h1>
-        <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Component</span>
+        <span class="rounded-full bg-lume-primary/10 px-2.5 py-0.5 text-xs font-medium text-lume-primary">Component</span>
       </div>
-      <p class="text-muted-foreground mt-1 text-sm">
+      <p class="text-lume-muted-foreground mt-1 text-sm">
         Displays a button or a component that looks like a button. Supports multiple variants, sizes, and states.
       </p>
     </div>
@@ -48,8 +48,8 @@ const handleSubmit = () => {
             <Button variant="ghost">Ghost</Button>
             <Button variant="link">Link</Button>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;Button variant="default | destructive | outline | secondary | ghost | link" /&gt;
             </p>
           </div>
@@ -64,19 +64,19 @@ const handleSubmit = () => {
           <div class="flex flex-wrap items-end gap-3">
             <div class="flex flex-col items-center gap-2">
               <Button size="sm">Small</Button>
-              <span class="text-[10px] text-muted-foreground font-mono">sm</span>
+              <span class="text-[10px] text-lume-muted-foreground font-mono">sm</span>
             </div>
             <div class="flex flex-col items-center gap-2">
               <Button size="default">Default</Button>
-              <span class="text-[10px] text-muted-foreground font-mono">default</span>
+              <span class="text-[10px] text-lume-muted-foreground font-mono">default</span>
             </div>
             <div class="flex flex-col items-center gap-2">
               <Button size="lg">Large</Button>
-              <span class="text-[10px] text-muted-foreground font-mono">lg</span>
+              <span class="text-[10px] text-lume-muted-foreground font-mono">lg</span>
             </div>
           </div>
-          <div class="rounded-lg bg-muted/50 p-3">
-            <p class="text-xs font-mono text-muted-foreground">
+          <div class="rounded-lg bg-lume-muted/50 p-3">
+            <p class="text-xs font-mono text-lume-muted-foreground">
               &lt;Button size="sm | md | lg" /&gt;
             </p>
           </div>
@@ -91,15 +91,15 @@ const handleSubmit = () => {
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b">
-                <th class="pb-2 pr-4 text-left font-medium text-muted-foreground text-xs">Variant / Size</th>
-                <th class="pb-2 px-4 text-center font-medium text-muted-foreground text-xs">sm</th>
-                <th class="pb-2 px-4 text-center font-medium text-muted-foreground text-xs">default</th>
-                <th class="pb-2 px-4 text-center font-medium text-muted-foreground text-xs">lg</th>
+                <th class="pb-2 pr-4 text-left font-medium text-lume-muted-foreground text-xs">Variant / Size</th>
+                <th class="pb-2 px-4 text-center font-medium text-lume-muted-foreground text-xs">sm</th>
+                <th class="pb-2 px-4 text-center font-medium text-lume-muted-foreground text-xs">default</th>
+                <th class="pb-2 px-4 text-center font-medium text-lume-muted-foreground text-xs">lg</th>
               </tr>
             </thead>
             <tbody class="divide-y">
               <tr v-for="variant in (['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'] as const)" :key="variant">
-                <td class="py-3 pr-4 font-mono text-xs text-muted-foreground">{{ variant }}</td>
+                <td class="py-3 pr-4 font-mono text-xs text-lume-muted-foreground">{{ variant }}</td>
                 <td class="py-3 px-4 text-center">
                   <Button :variant="variant" size="sm">Button</Button>
                 </td>
@@ -121,7 +121,7 @@ const handleSubmit = () => {
       <ShowcaseCard title="States" description="Disabled and loading states">
         <div class="space-y-6">
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Disabled</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Disabled</p>
             <div class="flex flex-wrap gap-3">
               <Button disabled>Default Disabled</Button>
               <Button variant="destructive" disabled>Destructive Disabled</Button>
@@ -130,7 +130,7 @@ const handleSubmit = () => {
             </div>
           </div>
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Loading</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Loading</p>
             <div class="flex flex-wrap gap-3">
               <Button disabled class="gap-2">
                 <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@ const handleSubmit = () => {
 
           <!-- Icon-only buttons -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Icon only</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Icon only</p>
             <div class="flex gap-2">
               <Button size="sm" class="h-8 w-8 p-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
@@ -206,7 +206,7 @@ const handleSubmit = () => {
                 v-model="email"
                 type="email"
                 required
-                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                class="flex h-9 w-full rounded-md border border-lume-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-lume-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lume-ring"
                 placeholder="you@example.com"
               />
             </div>
@@ -217,7 +217,7 @@ const handleSubmit = () => {
                 v-model="password"
                 type="password"
                 required
-                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                class="flex h-9 w-full rounded-md border border-lume-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-lume-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-lume-ring"
                 placeholder="********"
               />
             </div>
@@ -244,10 +244,10 @@ const handleSubmit = () => {
         <div class="space-y-6">
           <!-- Confirmation -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Confirmation dialog</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Confirmation dialog</p>
             <div class="rounded-lg border p-4 max-w-sm">
               <p class="text-sm font-medium">Are you sure?</p>
-              <p class="text-xs text-muted-foreground mt-1">This action cannot be undone. This will permanently delete your account.</p>
+              <p class="text-xs text-lume-muted-foreground mt-1">This action cannot be undone. This will permanently delete your account.</p>
               <div class="flex justify-end gap-2 mt-4">
                 <Button variant="outline" size="sm">Cancel</Button>
                 <Button variant="destructive" size="sm">Delete</Button>
@@ -257,7 +257,7 @@ const handleSubmit = () => {
 
           <!-- Toolbar -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Toolbar</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Toolbar</p>
             <div class="inline-flex rounded-lg border divide-x">
               <Button variant="ghost" size="sm" class="rounded-none rounded-l-lg px-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 12a4 4 0 0 0 0-8H6v8"/><path d="M15 20a4 4 0 0 0 0-8H6v8"/></svg>
@@ -273,9 +273,9 @@ const handleSubmit = () => {
 
           <!-- Navigation bar -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Navigation</p>
-            <div class="flex items-center gap-1 rounded-lg bg-muted p-1">
-              <Button variant="ghost" size="sm" class="bg-background shadow-sm">Home</Button>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Navigation</p>
+            <div class="flex items-center gap-1 rounded-lg bg-lume-muted p-1">
+              <Button variant="ghost" size="sm" class="bg-lume-background shadow-sm">Home</Button>
               <Button variant="ghost" size="sm">Products</Button>
               <Button variant="ghost" size="sm">About</Button>
               <Button variant="ghost" size="sm">Contact</Button>
@@ -284,10 +284,10 @@ const handleSubmit = () => {
 
           <!-- CTA group -->
           <div>
-            <p class="text-xs font-medium text-muted-foreground mb-3">Call to action</p>
+            <p class="text-xs font-medium text-lume-muted-foreground mb-3">Call to action</p>
             <div class="rounded-lg border p-6 text-center max-w-md">
               <h4 class="font-semibold">Ready to get started?</h4>
-              <p class="text-sm text-muted-foreground mt-1">Start building beautiful UIs with Lume components.</p>
+              <p class="text-sm text-lume-muted-foreground mt-1">Start building beautiful UIs with Lume components.</p>
               <div class="flex justify-center gap-3 mt-4">
                 <Button>Get Started</Button>
                 <Button variant="outline">Learn More</Button>

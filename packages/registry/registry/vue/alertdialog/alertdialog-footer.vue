@@ -24,7 +24,7 @@ const isSm = computed(() => size === 'sm')
       isSm
         ? 'flex-col-reverse'
         : 'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-      'bg-muted/50 rounded-b-lg px-6 py-4 dark:bg-muted/30',
+      'bg-lume-muted/50 rounded-b-lg px-6 py-4 dark:bg-lume-muted/30',
       isSm && 'grid grid-cols-2 gap-2',
       props.class
     )"

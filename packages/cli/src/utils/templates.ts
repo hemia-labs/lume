@@ -2,131 +2,225 @@
  * Templates for project initialization
  */
 
-export const GLOBALS_CSS_TEMPLATE = `@tailwind base;
-@tailwind components;
-@tailwind utilities;
+export const GLOBALS_CSS_TEMPLATE_VUETIFY = `@layer vuetify;
+@import "tailwindcss";
+@import "vuetify/styles" layer(vuetify);
 
-@layer base {
-  :root {
-    /* Color palette using HSL for easy theming */
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 5% 80% / 30%;
-    
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-    
-    /* Border radius */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius: 0.625rem;
-  }
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-  .dark {
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217.2 32.6% 50% / 30%;
-    
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --radius: 0.625rem;
-  }
+@theme inline {
+  --color-lume-border: var(--lume-border);
+  --color-lume-background: var(--lume-background);
+  --color-lume-foreground: var(--lume-foreground);
+  --color-lume-primary: var(--lume-primary);
+  --color-lume-primary-foreground: var(--lume-primary-foreground);
+  --color-lume-secondary: var(--lume-secondary);
+  --color-lume-secondary-foreground: var(--lume-secondary-foreground);
+  --color-lume-muted: var(--lume-muted);
+  --color-lume-muted-foreground: var(--lume-muted-foreground);
+  --color-lume-accent: var(--lume-accent);
+  --color-lume-accent-foreground: var(--lume-accent-foreground);
+  --color-lume-card: var(--lume-card);
+  --color-lume-card-foreground: var(--lume-card-foreground);
+  --color-lume-input: var(--lume-input);
+  --color-lume-ring: var(--lume-ring);
+  --color-lume-destructive: var(--lume-destructive);
+  --color-lume-destructive-foreground: var(--lume-destructive-foreground);
+
+  --lume-radius-sm: 0.375rem;
+  --lume-radius-md: 0.5rem;
+  --lume-radius-lg: 0.75rem;
+  --lume-radius: 0.625rem;
+}
+
+:root {
+  --lume-primary: 222.2 47.4% 11.2%;
+  --lume-primary-foreground: 210 40% 98%;
+
+  --lume-secondary: 210 40% 96.1%;
+  --lume-secondary-foreground: 222.2 47.4% 11.2%;
+
+  --lume-destructive: 0 84.2% 60.2%;
+  --lume-destructive-foreground: 210 40% 98%;
+
+  --lume-muted: 210 40% 96.1%;
+  --lume-muted-foreground: 215.4 16.3% 46.9%;
+
+  --lume-accent: 210 40% 96.1%;
+  --lume-accent-foreground: 222.2 47.4% 11.2%;
+
+  --lume-border: 214.3 31.8% 91.4%;
+  --lume-input: 214.3 31.8% 91.4%;
+  --lume-ring: 210 5% 80% / 30%;
+
+  --lume-background: 0 0% 100%;
+  --lume-foreground: 222.2 47.4% 11.2%;
+
+  --lume-card: 0 0% 100%;
+  --lume-card-foreground: 222.2 47.4% 11.2%;
+}
+
+[data-theme="dark"] {
+  --lume-primary: 210 40% 98%;
+  --lume-primary-foreground: 222.2 47.4% 11.2%;
+
+  --lume-secondary: 217.2 32.6% 17.5%;
+  --lume-secondary-foreground: 210 40% 98%;
+
+  --lume-destructive: 0 62.8% 30.6%;
+  --lume-destructive-foreground: 210 40% 98%;
+
+  --lume-muted: 217.2 32.6% 17.5%;
+  --lume-muted-foreground: 215 20.2% 65.1%;
+
+  --lume-accent: 217.2 32.6% 17.5%;
+  --lume-accent-foreground: 210 40% 98%;
+
+  --lume-border: 217.2 32.6% 17.5%;
+  --lume-input: 217.2 32.6% 17.5%;
+  --lume-ring: 217.2 32.6% 50% / 30%;
+
+  --lume-background: 222.2 84% 4.9%;
+  --lume-foreground: 210 40% 98%;
+
+  --lume-card: 222.2 84% 4.9%;
+  --lume-card-foreground: 210 40% 98%;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--lume-border));
   }
+
+  html,
+  body,
+  #app {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--lume-background));
   }
 }
+
+@supports (color: color-mix(in lab, red, red)) {
+  * {
+    outline-color: color-mix(in oklab, var(--lume-ring) 50%, transparent);
+  }
+}
+
 `
 
-export const TAILWIND_CONFIG_TEMPLATE = `import type { Config } from 'tailwindcss'
+export const GLOBALS_CSS_TEMPLATE = `@import "tailwindcss";
 
-export default {
-  darkMode: ['class'],
-  content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-      },
-      borderRadius: {
-        sm: 'var(--radius-sm)',
-        md: 'var(--radius-md)',
-        lg: 'var(--radius-lg)',
-        DEFAULT: 'var(--radius)',
-      },
-    },
-  },
-  plugins: [],
-} satisfies Config
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+  --color-lume-border: var(--lume-border);
+  --color-lume-background: var(--lume-background);
+  --color-lume-foreground: var(--lume-foreground);
+  --color-lume-primary: var(--lume-primary);
+  --color-lume-primary-foreground: var(--lume-primary-foreground);
+  --color-lume-secondary: var(--lume-secondary);
+  --color-lume-secondary-foreground: var(--lume-secondary-foreground);
+  --color-lume-muted: var(--lume-muted);
+  --color-lume-muted-foreground: var(--lume-muted-foreground);
+  --color-lume-accent: var(--lume-accent);
+  --color-lume-accent-foreground: var(--lume-accent-foreground);
+  --color-lume-card: var(--lume-card);
+  --color-lume-card-foreground: var(--lume-card-foreground);
+  --color-lume-input: var(--lume-input);
+  --color-lume-ring: var(--lume-ring);
+  --color-lume-destructive: var(--lume-destructive);
+  --color-lume-destructive-foreground: var(--lume-destructive-foreground);
+
+  --lume-radius-sm: 0.375rem;
+  --lume-radius-md: 0.5rem;
+  --lume-radius-lg: 0.75rem;
+  --lume-radius: 0.625rem;
+}
+
+:root {
+  --lume-primary: 222.2 47.4% 11.2%;
+  --lume-primary-foreground: 210 40% 98%;
+
+  --lume-secondary: 210 40% 96.1%;
+  --lume-secondary-foreground: 222.2 47.4% 11.2%;
+
+  --lume-destructive: 0 84.2% 60.2%;
+  --lume-destructive-foreground: 210 40% 98%;
+
+  --lume-muted: 210 40% 96.1%;
+  --lume-muted-foreground: 215.4 16.3% 46.9%;
+
+  --lume-accent: 210 40% 96.1%;
+  --lume-accent-foreground: 222.2 47.4% 11.2%;
+
+  --lume-border: 214.3 31.8% 91.4%;
+  --lume-input: 214.3 31.8% 91.4%;
+  --lume-ring: 210 5% 80% / 30%;
+
+  --lume-background: 0 0% 100%;
+  --lume-foreground: 222.2 47.4% 11.2%;
+
+  --lume-card: 0 0% 100%;
+  --lume-card-foreground: 222.2 47.4% 11.2%;
+}
+
+[data-theme="dark"] {
+  --lume-primary: 210 40% 98%;
+  --lume-primary-foreground: 222.2 47.4% 11.2%;
+
+  --lume-secondary: 217.2 32.6% 17.5%;
+  --lume-secondary-foreground: 210 40% 98%;
+
+  --lume-destructive: 0 62.8% 30.6%;
+  --lume-destructive-foreground: 210 40% 98%;
+
+  --lume-muted: 217.2 32.6% 17.5%;
+  --lume-muted-foreground: 215 20.2% 65.1%;
+
+  --lume-accent: 217.2 32.6% 17.5%;
+  --lume-accent-foreground: 210 40% 98%;
+
+  --lume-border: 217.2 32.6% 17.5%;
+  --lume-input: 217.2 32.6% 17.5%;
+  --lume-ring: 217.2 32.6% 50% / 30%;
+
+  --lume-background: 222.2 84% 4.9%;
+  --lume-foreground: 210 40% 98%;
+
+  --lume-card: 222.2 84% 4.9%;
+  --lume-card-foreground: 210 40% 98%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--lume-border));
+  }
+
+  html,
+  body,
+  #app {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  }
+
+  body {
+    background-color: hsl(var(--lume-background));
+  }
+}
+
+@supports (color: color-mix(in lab, red, red)) {
+  * {
+    outline-color: color-mix(in oklab, var(--lume-ring) 50%, transparent);
+  }
+}
+
 `
 
 export interface TemplateConfig {
   framework: string
   template?: string
-  tailwindConfigPath: string
   globalsCssPath: string
   componentsPath: string
   utilsPath: string
@@ -142,19 +236,16 @@ export function getTemplateConfig(
   // Default paths for different frameworks
   const configs: Record<string, Partial<TemplateConfig>> = {
     "vite-vue": {
-      tailwindConfigPath: "tailwind.config.ts",
       globalsCssPath: "src/assets/globals.css",
       componentsPath: "src/components",
       utilsPath: "src/lib/utils"
     },
     nuxt: {
-      tailwindConfigPath: "tailwind.config.ts",
       globalsCssPath: "assets/css/globals.css",
       componentsPath: "components",
       utilsPath: "utils"
     },
     next: {
-      tailwindConfigPath: "tailwind.config.ts",
       globalsCssPath: "src/app/globals.css",
       componentsPath: "src/components",
       utilsPath: "src/lib/utils"
@@ -167,7 +258,6 @@ export function getTemplateConfig(
   return {
     framework,
     template: templateKey,
-    tailwindConfigPath: config.tailwindConfigPath!,
     globalsCssPath: config.globalsCssPath!,
     componentsPath: config.componentsPath!,
     utilsPath: config.utilsPath!

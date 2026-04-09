@@ -65,7 +65,7 @@ const isCentered = computed(() => props.size === 'sm')
     >
       <div
         v-if="isOpen"
-        class="fixed left-[50%] top-[50%] z-50 grid w-full translate-x-[-50%] translate-y-[-50%] gap-0 border bg-background shadow-lg duration-200 sm:rounded-lg"
+        class="fixed left-[50%] top-[50%] z-50 grid w-full translate-x-[-50%] translate-y-[-50%] gap-0 border bg-lume-background shadow-lg duration-200 sm:rounded-lg"
         :class="cn(sizeClasses, isCentered && 'text-center', props.class)"
       >
         <slot />

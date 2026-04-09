@@ -1,5 +1,5 @@
 export const radius = {
-  sm: "var(--radius-sm)",
-  md: "var(--radius-md)",
-  lg: "var(--radius-lg)",
+  sm: "var(--lume-radius-sm)",
+  md: "var(--lume-radius-md)",
+  lg: "var(--lume-radius-lg)",
 }
